@@ -123,7 +123,6 @@ func (r *Resolver) visitExpressionStmt(stmt ExpressionStmt) interface{} {
 	return nil
 }
 
-//AAAHHHHH AHHHHAHAAHAAHAA AAAAAAHHHHHHH AAAHHHHHHHHHH
 func (r *Resolver) visitForStmt(stmt ForStmt) interface{} {
 	if stmt.initializer != nil {
 		r.resolveStmt(stmt.initializer)
