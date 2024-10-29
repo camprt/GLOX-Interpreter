@@ -108,7 +108,7 @@ func (itpr *Interpreter) visitExpressionStmt(stmt ExpressionStmt) interface{} {
 	return nil
 }
 
-//For Stmt AAAAAAAAAAAAhahhhhhhhhHHHHHHHHH
+//For Stmt
 func (itpr *Interpreter) visitForStmt(stmt ForStmt) interface{} {
 	if stmt.initializer != nil {
 		itpr.execute(stmt.initializer)
@@ -127,13 +127,6 @@ func (itpr *Interpreter) visitForStmt(stmt ForStmt) interface{} {
 			itpr.evaluate(stmt.increment)
 		}
 	}
-
-	// for itpr.isTruthy(itpr.evaluate(stmt.condition)) {
-	// 	itpr.execute(stmt.body)
-	// 	if stmt.increment != nil {
-	// 		itpr.evaluate(stmt.increment)
-	// 	}
-	// }
 
 	return nil
 }
